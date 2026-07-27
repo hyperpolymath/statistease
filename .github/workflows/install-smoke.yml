@@ -23,7 +23,6 @@ on:
   workflow_dispatch:
 
 permissions: read-all
-  actions: read
 
 concurrency:
   group: install-smoke-${{ github.ref }}

@@ -24,7 +24,6 @@ on:
   workflow_dispatch:
 
 permissions: read-all
-  actions: read
 
 concurrency:
   group: zig-${{ github.ref }}
