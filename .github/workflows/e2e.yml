@@ -3,7 +3,13 @@
 #
 # Statistikles — E2E + Aspect Tests
 #
-# Runs the Julia test suite (693 @test assertions, 10 Agda proofs, 8 integrations).
+# Runs the Julia test suite, then the Agda proof gate.
+#
+# Counts are deliberately NOT stated here. The previous header claimed
+# "693 @test assertions, 10 Agda proofs, 8 integrations"; measured on this tree
+# it is 1129 `@test` occurrences under test/ and 3 Agda modules under proofs/ —
+# wrong in both directions, and wrong again on the next commit that adds a test.
+# The authoritative counts are whatever this job prints when it runs.
 
 name: E2E + Aspect
 
