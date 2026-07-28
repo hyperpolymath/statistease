@@ -35,8 +35,8 @@ hooks fail if any check fails.
 - severity: critical
 
 ### governance-docs
-- description: GOVERNANCE.adoc, MAINTAINERS.adoc, CODEOWNERS must exist
-- run: test -f GOVERNANCE.adoc && test -f MAINTAINERS.adoc && test -f .github/CODEOWNERS
+- description: GOVERNANCE.md, MAINTAINERS.adoc, CODEOWNERS must exist
+- run: test -f GOVERNANCE.md && test -f MAINTAINERS.adoc && test -f .github/CODEOWNERS
 - severity: critical
 
 ### machine-readable-dir

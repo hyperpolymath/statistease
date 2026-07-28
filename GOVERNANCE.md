@@ -157,4 +157,69 @@ with the community before adoption, even though the BDFL retains final authority
 
 ---
 
+## Contribution Lifecycle
+
+| Stage | Process |
+|---|---|
+| **Ideation** | Open issue, discuss feasibility |
+| **Development** | Fork, implement, test thoroughly |
+| **Review** | Submit PR, maintainer reviews within 7 days |
+| **Merge** | Maintainer merges or requests changes |
+| **Release** | Maintainer publishes according to project conventions |
+
+## Conflict Resolution
+
+In case of disagreements:
+
+1. Discuss in the relevant GitHub issue or PR.
+2. Provide technical justification for positions.
+3. Maintainer mediates and makes the final decision.
+4. The decision is documented and can be revisited later.
+
+## Project Policies
+
+This repository adheres to hyperpolymath estate-wide policies:
+
+- **Licence** — MPL-2.0 for code, CC-BY-SA-4.0 for prose (per `standards/LICENCE-POLICY.adoc`)
+- **Code of Conduct** — follows hyperpolymath `CODE_OF_CONDUCT.md`
+- **Security** — follows hyperpolymath `SECURITY.md`
+- **Contributing** — follows hyperpolymath `CONTRIBUTING.adoc` conventions
+
+## Repository-Specific Conventions
+
+| Convention | Description |
+|---|---|
+| **Signing** | All commits must be signed (SSH or GPG) |
+| **SPDX headers** | All source files must carry SPDX licence identifiers |
+| **Contractiles** | `Mustfile`, `Trustfile`, `Intendfile`, `Adjustfile` in root |
+| **Machine readable** | `META.a2ml` in `.machine_readable/6a2/` |
+| **CI/CD** | GitHub Actions workflows in `.github/workflows/` |
+
+## Governance Evolution
+
+As the project grows, this governance model may evolve:
+
+- **Adding co-maintainers** — when contribution volume warrants it
+- **Forming a team** — for complex multi-maintainer projects
+- **Adopting TPCF** — for large, multi-repository projects (see `rhodium-standard-repositories`)
+
+Changes to this document require the same process as Significant Changes above.
+
+## See Also
+
+- [Maintainers](MAINTAINERS.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing Guide](CONTRIBUTING.md)
+- [Estate Licence Policy](https://github.com/hyperpolymath/standards/blob/main/LICENCE-POLICY.adoc)
+- [rhodium-standard-repositories (TPCF)](https://github.com/hyperpolymath/standards)
+
+## Changelog
+
+| Date | Change | By |
+|---|---|---|
+| 2026-06-07 | Initial governance model established | @hyperpolymath |
+| 2026-07-27 | Merged in the sections that had lived only in `GOVERNANCE.adoc`, which was deleted in #68; this file is now the single source. | @hyperpolymath |
+
+---
+
 <sub>Copyright (c) 2026 hyperpolymath. Licensed under MPL-2.0.</sub>
