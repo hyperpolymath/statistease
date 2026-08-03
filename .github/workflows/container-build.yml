@@ -29,7 +29,12 @@ on:
       - '.github/workflows/container-build.yml'
   workflow_dispatch:
 
-permissions: read-all
+# Explicit rather than `read-all`: every job here only checks out and builds.
+# Naming the one scope it needs also removes the last scalar `permissions:`
+# block, which is what let a text-matching sweep produce invalid YAML twice
+# (fixed #64, reintroduced #68, re-fixed #69).
+permissions:
+  contents: read
 
 concurrency:
   group: container-build-${{ github.ref }}
