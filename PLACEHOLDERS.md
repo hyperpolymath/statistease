@@ -25,7 +25,7 @@ sed -i 's/Jonathan D.A. Jewell/Jane Doe/g' $(grep -rl 'Jonathan D.A. Jewell' .)
 sed -i 's/j.d.a.jewell@open.ac.uk/jane@example.org/g' $(grep -rl 'j.d.a.jewell@open.ac.uk' .)
 sed -i 's/hyperpolymath/my-org/g' $(grep -rl 'hyperpolymath' .)
 sed -i 's/Statistikles/my-project/g' $(grep -rl 'Statistikles' .)
-sed -i 's/{{PROJECT}}/MY_PROJECT/g' $(grep -rl '{{PROJECT}}' .)
+sed -i 's/STATISTIKLES/MY_PROJECT/g' $(grep -rl 'STATISTIKLES' .)
 sed -i 's/{{project}}/my_project/g' $(grep -rl '{{project}}' .)
 sed -i 's/statistikles/my-project/g' $(grep -rl 'statistikles' .)
 sed -i 's/github.com/github.com/g' $(grep -rl 'github.com' .)
@@ -43,9 +43,9 @@ sed -i "s/2026-03-16/$(date +%Y-%m-%d)/g" $(grep -rl '2026-03-16' .)
 | `j.d.a.jewell@open.ac.uk` | Primary contact email | `jane@example.org` | SPDX headers (all files), .mailmap, .reuse/dep5, .well-known/humans.txt |
 | `{{AUTHOR_EMAIL_ALT}}` | Previous/secondary email (for .mailmap) | `old@example.com` | .mailmap |
 | `{{AUTHOR_ORG}}` | Author's organization/affiliation | `Acme University` | project-metadata.k9.ncl |
-| `{{AUTHOR_LAST}}` | Author surname (for citations) | `Doe` | docs/CITATIONS.adoc |
-| `{{AUTHOR_FIRST}}` | Author first name (for citations) | `Jane` | docs/CITATIONS.adoc |
-| `{{AUTHOR_INITIALS}}` | Author initials (for citations) | `J.` | docs/CITATIONS.adoc |
+| `Jewell` | Author surname (for citations) | `Doe` | docs/CITATIONS.adoc |
+| `Jonathan` | Author first name (for citations) | `Jane` | docs/CITATIONS.adoc |
+| `JDJ` | Author initials (for citations) | `J.` | docs/CITATIONS.adoc |
 
 ### Project Identity
 
@@ -53,7 +53,7 @@ sed -i "s/2026-03-16/$(date +%Y-%m-%d)/g" $(grep -rl '2026-03-16' .)
 |---|---|---|---|
 | `Statistikles` | Human-readable project name | `My Project` | SECURITY.md, CODE_OF_CONDUCT.md, TOPOLOGY.md, STATE.a2ml, Justfile, GOVERNANCE.md, MAINTAINERS.md, flake.nix, devcontainer.json |
 | `{{PROJECT_DESCRIPTION}}` | One-line description | `A tool for X` | flake.nix |
-| `{{PROJECT}}` | Uppercase identifier (for Idris2 modules, C macros) | `MY_PROJECT` | ABI-FFI-README.md, src/abi/*.idr, ffi/zig/*.zig |
+| `STATISTIKLES` | Uppercase identifier (for Idris2 modules, C macros) | `MY_PROJECT` | ABI-FFI-README.md, src/abi/*.idr, ffi/zig/*.zig |
 | `{{project}}` | Lowercase identifier (for C symbols, filenames) | `my_project` | ABI-FFI-README.md, ffi/zig/*.zig |
 | `statistikles` | Repository name (slug) | `my-project` | CONTRIBUTING.md, SECURITY.md, CODE_OF_CONDUCT.md, cliff.toml |
 | `hyperpolymath` | GitHub/GitLab org or username | `my-org` | SPDX headers, CONTRIBUTING.md, SECURITY.md, GOVERNANCE.md, MAINTAINERS.md, CODEOWNERS, mirror.yml, cliff.toml |
@@ -65,7 +65,7 @@ sed -i "s/2026-03-16/$(date +%Y-%m-%d)/g" $(grep -rl '2026-03-16' .)
 |---|---|---|---|
 | `2026` | Current year | `2026` | SPDX headers (all files), GOVERNANCE.md, MAINTAINERS.md |
 | `2026-03-16` | Current date (ISO) | `2026-02-14` | STATE.a2ml, MAINTAINERS.md |
-| `{{DATE}}` | Last updated date | `2026-02-14` | TOPOLOGY.md, THREAT-MODEL.md |
+| `2026-08-05` | Last updated date | `2026-02-14` | TOPOLOGY.md, THREAT-MODEL.md |
 
 ### Contact & Security
 
@@ -75,7 +75,7 @@ sed -i "s/2026-03-16/$(date +%Y-%m-%d)/g" $(grep -rl '2026-03-16' .)
 | `[PGP fingerprint not set]` | 40-char PGP fingerprint | `ABCD 1234 ...` | SECURITY.md |
 | `{{PGP_KEY_URL}}` | URL to public PGP key | `https://keys.openpgp.org/...` | SECURITY.md |
 | `{{WEBSITE}}` | Project website | `https://example.org` | SECURITY.md |
-| `{{CONDUCT_EMAIL}}` | Conduct reports email | `conduct@example.org` | CODE_OF_CONDUCT.md |
+| `j.d.a.jewell@open.ac.uk` | Conduct reports email | `conduct@example.org` | CODE_OF_CONDUCT.md |
 | `{{CONDUCT_TEAM}}` | Conduct committee name | `Code of Conduct Committee` | CODE_OF_CONDUCT.md |
 | `{{RESPONSE_TIME}}` | SLA for initial response | `48 hours` | CODE_OF_CONDUCT.md |
 
