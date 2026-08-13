@@ -18,6 +18,24 @@ permissions:
 
 jobs:
   # ---------------------------------------------------------------------------
+  # Job 0: every workflow must PARSE
+  #
+  # A malformed workflow is not a red check — Actions rejects it at parse time,
+  # yielding zero jobs and NO check run, so the board reads green while the gate
+  # is dead. This repo hit that twice in one day from the same sweep (fixed in
+  # #64, reintroduced by #68). This job is the backstop.
+  # ---------------------------------------------------------------------------
+  workflow-yaml:
+    name: Workflows parse (no silent-dead gates)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Validate every workflow parses and declares jobs
+        run: ./.githooks/validate-workflow-yaml.sh
+
+  # ---------------------------------------------------------------------------
   # Job 1: A2ML manifest validation
   # ---------------------------------------------------------------------------
   a2ml-validate:
