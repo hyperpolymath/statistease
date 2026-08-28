@@ -1,0 +1,25 @@
+== Quickstart
+
+The canonical quickstart guides live at the repository root:
+
+* link:../QUICKSTART-USER.adoc[QUICKSTART-USER.adoc] — install and run
+in 5 minutes
+* link:../QUICKSTART-DEV.adoc[QUICKSTART-DEV.adoc] — clone, build, test,
+PR
+* link:../QUICKSTART-MAINTAINER.adoc[QUICKSTART-MAINTAINER.adoc] —
+packaging and deployment
+
+The short version:
+
+[source,bash]
+----
+git clone https://github.com/hyperpolymath/statistikles.git
+cd statistikles
+just setup    # julia --project=. -e 'using Pkg; Pkg.instantiate()'
+just run      # julia --project=. -e 'using Statistikles; main()'
+just test     # julia --project=. test/runtests.jl
+----
+
+Requires https://julialang.org/downloads/[Julia] 1.10+ and
+https://github.com/casey/just[just]. See the link:../README.adoc[README]
+for the full feature overview.

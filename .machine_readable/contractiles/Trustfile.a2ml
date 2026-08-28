@@ -71,7 +71,7 @@ Current trust level: maximal
 - severity: advisory
 - areas:
   - .machine_readable/
-  - GOVERNANCE.adoc
+  - GOVERNANCE.md
   - MAINTAINERS.adoc
   - .github/CODEOWNERS
 
